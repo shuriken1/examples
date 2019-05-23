@@ -93,9 +93,9 @@ class FilesController extends Controller
 
         // exit;
 
-        // $url = "https://schoolphotos.blob.core.windows.net/main1/".$siteID."/".$file->filename.".jpg"; // DEBUG Other filetypes? Change auth header below too.
+        // $url = "https://<INFORMATION REMOVED FOR GITHUB>/main1/".$siteID."/".$file->filename.".jpg"; // DEBUG Other filetypes? Change auth header below too.
 
-        // $accesskey = "WPm7sZGSyXJX8UGZrS3k1Ebj2cMk1zS1HPQ2RlpfdPVdIvkUUldk0PsWvshqKtQ8Dj5GnPlNm5Y+g3D9uYsAoA==";
+        // $accesskey = "<INFORMATION REMOVED FOR GITHUB>";
         // $currentDate = gmdate("D, d M Y H:i:s T", time());
 
         // // construct input value
