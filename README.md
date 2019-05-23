@@ -1,4 +1,4 @@
-# examples
+# Code Examples
 A few examples of code I have produced over a reasonably large time span.
 
 Merit Me was written in approximately 2010. Include is the import script which received 7 exports from the on-site MIS, parsed them, compared them against the live DB and then calculated and applied the necessary changes. This import script was able to set up students, staff, class, class memberships, form groups and all other data needed for Merit Me to work. It was non-destructive and aimed to reduce the workload of the schools' IT team as much as possible.
