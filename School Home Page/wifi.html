@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="includes/favicon.ico">
+
+    <title>School Intranet</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="includes/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main role="main">
+			
+			<div class="container py-2">
+				<div class="row">
+					<div class="col-8">
+						<div class="media">
+							<div class="media-body text-right mt-3 mb-1">
+								Want to search the web? Type it here!
+							</div>
+							<img class="ml-3" src="images/arrow_up.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+      <div id="titlejumbo" class="jumbotron mb-0 py-4 py-lg-5">
+        <div class="container">
+          <h1 class="display-3">Wi-Fi Details</h1>
+        </div>
+      </div>
+      
+      <div id="quicktip" class="jumbotron p-2 bg-danger">
+        <div class="container text-white">The following details should not be viewed with students present.</div>
+      </div>
+
+      <div class="container">
+				<div class="row">
+					<div class="col-md-6 text-center">
+						<h2>Staff</h2>
+            <div id="pwStaffLabelHidden" class="py-4 password-text">********</div>
+            <div id="pwStaffLabel" class="py-4 d-none password-text">password1</div>
+            <button id="toggleStaff" class="btn btn-danger" data-pw="Staff">Show Password</button>
+          </div>
+
+					<div class="col-md-6 text-center">
+						<h2>Visitors</h2>
+            <div id="pwVisitorsLabelHidden" class="py-4 password-text">********</div>
+            <div id="pwVisitorsLabel" class="py-4 d-none password-text">password2</div>
+            <button id="toggleVisitors" class="btn btn-danger" data-pw="Visitors">Show Password</button>
+          </div>
+        </div>
+      
+      </div>
+
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="includes/bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $("#toggleStaff, #toggleVisitors").click(function() {
+        var el = $(this).data('pw');
+        if ($("#pw"+el+"Label").hasClass('d-none')) {
+          $("#pw"+el+"Label").removeClass('d-none');
+          $("#pw"+el+"LabelHidden").addClass('d-none');
+
+          $("#toggle"+el).html('Hide Password');
+          $("#toggle"+el).removeClass('btn-danger').addClass('btn-success');
+
+          setTimeout(function() {
+            hidePW(el);
+          }, 4000)
+        } else {
+          hidePW(el);
+        }
+      });
+
+      function hidePW(el) {
+        $("#pw"+el+"Label").addClass('d-none');
+        $("#pw"+el+"LabelHidden").removeClass('d-none');
+        
+        $("#toggle"+el).html('Show Password');
+        $("#toggle"+el).removeClass('btn-success').addClass('btn-danger');
+      }
+    </script>
+  </body>
+</html>

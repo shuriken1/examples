@@ -1,0 +1,28 @@
+.jumbotron {
+	background-color: rgb(100, 103, 107);
+	border-radius: 0;
+}
+
+#titlejumbo {
+	color: white;
+	background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Sunrise_over_the_countryside_beside_the_towns_Bled%2C_Radovljica_and_Jesenice.jpg/1280px-Sunrise_over_the_countryside_beside_the_towns_Bled%2C_Radovljica_and_Jesenice.jpg');
+	background-color: rgba(0, 0, 0, 0.5);
+	background-position: center -40%;
+	background-size: cover;
+	background-blend-mode: multiply;
+}
+
+#quicktip {
+	background-color: rgb(233, 236, 239);
+}
+
+#form-list li {
+	border: 0;
+}
+
+.shortcut:hover { box-shadow: 0 8px 18px 0px rgba(0,0,0,.15); }
+
+.password-text {
+	font-family: consolas, arial, sans-serif;
+	font-size: 16pt;
+}
